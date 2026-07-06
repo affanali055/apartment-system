@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logged Out</title>
+    <link rel="stylesheet" href="{% static 'css/logout.css' %}">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="/dashboard/">Dashboard</a></li>
+    <li><a href="/todo/">Todo</a></li>
+    <li><a href="/profile/">Profile</a></li>
+    <li><a href="/logout/">Logout</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <div class="card">
+    <div class="icon">✅</div>
+    <h1>You have been logged out successfully.</h1>
+    <div class="actions">
+      <a class="btn" href="/accounts/login/">Login Again</a>
+      <a class="btn secondary" href="/dashboard/">Back to Dashboard</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
