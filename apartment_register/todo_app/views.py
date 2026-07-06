@@ -12,7 +12,7 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.success(request, 'You are now logged in.')
-            return redirect('todo_page')
+            return redirect('/dashboard/')
     else:
         form = AuthenticationForm()
 
