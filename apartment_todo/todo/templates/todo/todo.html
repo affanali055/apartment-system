@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Management</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">Todo App</div>
+        <div class="nav-links">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="{% url 'todo_page' %}">Todo</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Todo Management</h1>
+
+        <form class="todo-form">
+            <input type="text" name="todo" placeholder="Enter a todo" />
+            <button type="submit">Add Todo</button>
+        </form>
+
+        <section class="todo-list">
+            <h2>Your Todos</h2>
+            <ul>
+                {% for todo in todos %}
+                <li>
+                    <span>{{ todo }}</span>
+                    <button type="button" class="delete-btn">Delete</button>
+                </li>
+                {% empty %}
+                <li>No todos yet.</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
