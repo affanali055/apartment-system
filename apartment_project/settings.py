@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'accounts',
     'apartment_register.todo_app',
     'apartment_todo.todo',
+    'apartment_dashboard',
 ]
 
 MIDDLEWARE = [
