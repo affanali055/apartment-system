@@ -7,6 +7,10 @@ class AccountsSanityTest(TestCase):
         response = self.client.get('/accounts/login/')
         self.assertIn(response.status_code, (200, 302))
 
+    def test_unified_auth_api_routes_are_available(self):
+        response = self.client.get('/api/auth/me/')
+        self.assertEqual(response.status_code, 401)
+
     def test_register_app_url(self):
         response = self.client.get('/register/')
         self.assertIn(response.status_code, (200, 302))
