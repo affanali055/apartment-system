@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'apartment_dashboard/css/dashboard.css' %}">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="{% url 'apartment_dashboard:dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'apartment_dashboard:todo' %}">Todo</a></li>
+        <li><a href="{% url 'apartment_dashboard:profile' %}">Profile</a></li>
+        <li><a href="{% url 'apartment_dashboard:logout' %}">Logout</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <h1>Your Profile</h1>
+    <p>This is a placeholder profile page.</p>
+    <a class="btn" href="{% url 'apartment_dashboard:dashboard' %}">Back to Dashboard</a>
+</main>
+
+</body>
+</html>
