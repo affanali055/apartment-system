@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Todo App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Todo App</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'todo' %}" class="nav-link">Todo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'profile' %}" class="nav-link active">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="profile-card">
+            <h1 class="profile-title">My Profile</h1>
+            
+            <div class="profile-info">
+                <div class="info-group">
+                    <label class="info-label">Full Name:</label>
+                    <p class="info-value">{{ user_info.full_name }}</p>
+                </div>
+                
+                <div class="info-group">
+                    <label class="info-label">Username:</label>
+                    <p class="info-value">{{ user_info.username }}</p>
+                </div>
+                
+                <div class="info-group">
+                    <label class="info-label">Email:</label>
+                    <p class="info-value">{{ user_info.email }}</p>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-primary">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
