@@ -22,6 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'accounts',
+    'apartment_register.todo_app',
+    'apartment_todo.todo',
 ]
 
 MIDDLEWARE = [
