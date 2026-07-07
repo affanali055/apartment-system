@@ -53,7 +53,7 @@ TEMPLATES = [
             ],
         },
     },
-]
+]   
 
 WSGI_APPLICATION = 'apartment_project.wsgi.application'
 
